@@ -4,8 +4,8 @@ angular.module("ng-clipboard")
             restrict: "A",
             scope: {
                 ngCopy: "=",
-                onSuccess: "=",
-                onError: "="
+                onSuccess: "&",
+                onError: "&"
             },
             link: (scope, element) => {
                 let onSuccess = () => {
