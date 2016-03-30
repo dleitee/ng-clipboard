@@ -1,28 +1,23 @@
 angular.module("ng-clipboard")
-    .directive("ngCut", () => {
+    .directive("ngCut", ["createFake", (createFake) => {
         return {
             restrict: "A",
             scope: {
-                ngCut: "="
+                ngCut: "=",
+                onSuccess: "&",
+                onError: "&"
             },
             link: (scope, element) => {
-                element.on("click", () => {
-                    let placeholder = document.createElement("textarea");
-                    placeholder.setAttribute(
-                        "style", 
-                        "position: absolute;overflow: hidden;width: 0;height: 0;top: 0;left: 0;"
-                    );
-                    placeholder.innerText = scope.ngCut;
-                    document.body.appendChild(placeholder);
-                    placeholder.select();
-                    try {
-                        document.execCommand("copy");
-                    } catch (err) {
-                        console.err(err);
-                    }
-                    placeholder.remove();
+                let onSuccess = () => {
                     scope.ngCut = "";
+                    scope.onSuccess();
+                };
+                let onError = () => {
+                    scope.onError();    
+                };
+                element.on("click", () => {
+                    createFake(scope.ngCut, "copy", onSuccess, onError);
                 });
             }
         };
-    });
+    }]);
