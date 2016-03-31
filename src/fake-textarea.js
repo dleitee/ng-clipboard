@@ -11,10 +11,10 @@ angular.module("ng-clipboard")
 		    placeholder.select();
 		    try {
 		        document.execCommand(command);
+		        placeholder.remove();
 		    } catch (err) {
 		        onError(err);
 		    }
 		    onSuccess();
-		    placeholder.remove();
 		};
 	});
