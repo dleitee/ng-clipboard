@@ -18,7 +18,7 @@ bower install ng-clipboard
 
 It is very easy to use ng-clipboard, just put a button with one of the directives 'ng-copy' or 'ng-cut'. Both take as a parameter an ngModel.
 
-[Example](http://jsfiddle.net/dleitee/kh61dyL9/31/)
+[Example](http://jsfiddle.net/dleitee/uo5emcuz/)
 
 ### ng-copy
 
@@ -32,4 +32,12 @@ It is very easy to use ng-clipboard, just put a button with one of the directive
 ```html
 <input ng-model="textToCopy">
 <button ng-cut="textToCopy"></button>
+```
+
+## Advanced 
+
+### onSucces and onError callbacks
+```html
+<input ng-model="textToCopy">
+<button ng-cut="textToCopy" onSuccess="onSuccess()" onError="onError()"></button>
 ```
