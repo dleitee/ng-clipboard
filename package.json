@@ -1,11 +1,7 @@
 {
   "name": "ng-clipboard",
   "version": "1.0.0",
-  "description": "Angular clipboard directive",
-  "main": ".",
-  "scripts": {
-    "test": "test"
-  },
+  "description": "AngularJS directive to copy or cut text to clipboard without using flash.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dleitee/ng-clipboard.git"
