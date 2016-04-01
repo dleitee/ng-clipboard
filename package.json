@@ -15,7 +15,7 @@
     "cut"
   ],
   "author": "Daniel Leite de Oliveira <dleitee@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dleitee/ng-clipboard/issues"
   },
