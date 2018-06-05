@@ -1,5 +1,7 @@
 # ng-clipboard
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/dleitee/ng-clipboard.svg)](https://greenkeeper.io/)
+
 AngularJS directive to copy or cut text to clipboard without using flash.
 
 ## Install
