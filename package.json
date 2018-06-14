@@ -6,6 +6,9 @@
     "type": "git",
     "url": "git+https://github.com/dleitee/ng-clipboard.git"
   },
+  "scripts": {
+    "prepublish": "gulp js"
+  },
   "keywords": [
     "angular",
     "javascript",
@@ -21,6 +24,7 @@
   },
   "homepage": "https://github.com/dleitee/ng-clipboard#readme",
   "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
