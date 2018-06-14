@@ -6,7 +6,7 @@ angular.module("ng-clipboard")
 		        "style", 
 		        "position: absolute;overflow: hidden;width: 0;height: 0;top: 0;left: 0;"
 		    );
-		    placeholder.innerText = text;
+		    placeholder.value = text;
 		    document.body.appendChild(placeholder);
 		    placeholder.select();
 		    try {
